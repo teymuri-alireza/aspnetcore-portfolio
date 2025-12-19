@@ -1,0 +1,16 @@
+# Build outputs
+bin/
+obj/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.csproj.user
+
+# Logs & temp
+*.log
+*.cache
+
+# App settings (development only)
+appsettings.Development.json
