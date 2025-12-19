@@ -18,5 +18,17 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+    /*    background-color: #3636b0;*/
+    background-color: #2f2f93;
+    color: white;
+}
+/* navbar in _layout */
+.navbar {
+    justify-content: center;
+    background-color: #222268;
+}
+/* home-index */
+.intro {
+    margin-top: 50px;
 }
