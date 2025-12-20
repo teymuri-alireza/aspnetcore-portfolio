@@ -1,0 +1,21 @@
+﻿@model MyPortfolio.Models.ContactInfo;
+
+@{
+    ViewData["Title"] = "اطلاعات تماس";
+}
+<link rel="stylesheet" href="~/css/contact.css" />
+
+<div class="main-div">
+    <div class="inside-div">
+        <h3>ایمیل</h3>
+        <a class="links" title="Email address" href="mailto:@Model.Email">@Model.Email</a>
+    </div>
+    <div class="inside-div">
+        <h3>تلگرام</h3>
+        <a class="links" title="telegram account" href="https://t.me/teymuri_alireza">@Model.Telegram</a>
+    </div>
+    <div class="inside-div">
+        <h3>موقعیت جغرافیایی</h3>
+        <p class="links" style="text-decoration:none;">@Model.Location</p>
+    </div>
+</div>
