@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+/*    font-family: consolas;*/
+}
 html {
   font-size: 14px;
 }
@@ -19,18 +25,17 @@ html {
 
 body {
     margin-bottom: 60px;
-    /*    background-color: #3636b0;*/
-    background-color: #2f2f93;
+    background-color: black;
     color: white;
-    font-family: "Noto Sans Arabic";
     font-size: 1.2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #1d061a;
+    font-family: "Noto Sans Arabic";
 }
 /* navbar in _layout */
 .navbar {
     justify-content: center;
-    background-color: #222268;
-}
-/* home-index */
-.intro {
-    margin-top: 50px;
 }
