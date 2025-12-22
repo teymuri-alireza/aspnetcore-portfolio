@@ -5,10 +5,11 @@
 }
 .inside-div {
     width: 700px;
+    margin: 0px auto 10px auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 .links {
-    color: rgba(45,255,196,0.9);
+    color: white;
 }
