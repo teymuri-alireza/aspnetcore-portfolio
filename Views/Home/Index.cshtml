@@ -2,7 +2,9 @@
     ViewData["Title"] = "علیرضا تیموری";
 }
 
-<link rel="stylesheet" href="~/css/home.css" asp-append-version="true" />
+@section css{
+    <link rel="stylesheet" href="~/css/home.css" asp-append-version="true" />
+}
 <div>
     <div>
         <h1 class="shadow-glow">علیرضا تیموری</h1>
@@ -52,7 +54,9 @@
     </div>
 </div>
 
-<script>
-    var active_navbar = document.getElementById("homePage");
-    active_navbar.classList.add("active");
-</script>
+@section Scripts{
+    <script>
+        var active_navbar = document.getElementById("homePage");
+        active_navbar.classList.add("active");
+    </script>
+}

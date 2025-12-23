@@ -3,8 +3,10 @@
 @{
     ViewData["Title"] = "اطلاعات تماس";
 }
-<link rel="stylesheet" href="~/css/contact.css" />
 
+@section css{
+    <link rel="stylesheet" href="~/css/contact.css" />
+}
 <div class="main-div">
     <div class="inside-div">
         <h3>ایمیل</h3>
@@ -20,7 +22,9 @@
     </div>
 </div>
 
-<script>
-    var active_navbar = document.getElementById("contactPage");
-    active_navbar.classList.add("active");
-</script>
+@section Scripts{
+    <script>
+        var active_navbar = document.getElementById("contactPage");
+        active_navbar.classList.add("active");
+    </script>
+}
