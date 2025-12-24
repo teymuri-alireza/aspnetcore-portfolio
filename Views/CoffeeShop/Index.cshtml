@@ -8,8 +8,44 @@
     <link rel="stylesheet" asp-append-version="true" href="~/css/CoffeeShop/home.css" />
 }
 
-<div class="main-div">
-    <div class="text-center">
-        <img class="logo-img" alt="front page logo" title="Coffee Shop logo" src="~/images/CofeeShop/coffee-logo.png" />
+@section HeroSection{
+    <div class="hero-text">
+        <h1>طعم واقعی قهوه</h1>
+        <p>
+            در کافه قهوه، بهترین دانه‌های قهوه با عشق و دقت آماده می‌شوند.
+            تجربه‌ای گرم، آرام و فراموش‌نشدنی در انتظار شماست.
+        </p>
     </div>
-</div>
+    <div class="hero-image">
+        <img class="home-imgs" src="~/images/CofeeShop/coffee-logo.png" />
+    </div>
+
+}
+
+<!-- Products Section -->
+<section class="products" id="products">
+    <h2>محصولات ما</h2>
+    <div class="product-list">
+        <div class="product-card">
+            <div class="product-image">
+                <img class="home-imgs" src="~/images/CofeeShop/espresso-img2.jpg" />
+            </div>
+            <h3>اسپرسو</h3>
+            <p>قهوه‌ای غلیظ و انرژی‌بخش با طعمی عمیق.</p>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+                <img class="home-imgs" src="~/images/CofeeShop/cappuccino-img2.jpg" />
+            </div>
+            <h3>کاپوچینو</h3>
+            <p>ترکیبی متعادل از قهوه، شیر و فوم.</p>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+                <img class="home-imgs" src="~/images/CofeeShop/latte-image.jpg" />
+            </div>
+            <h3>لاته</h3>
+            <p>نرم، خامه‌ای و مناسب دوستداران طعم ملایم.</p>
+        </div>
+    </div>
+</section>

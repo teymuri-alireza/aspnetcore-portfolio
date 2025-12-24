@@ -10,32 +10,29 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid navbar-bg">
-                <a class="navbar-brand navbar-bg" asp-area="" asp-controller="CoffeeShop" asp-action="Index">کافی‌شاپ نمونه</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link navbar-bg" asp-area="" asp-controller="CoffeeShop" asp-action="Products">محصولات</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link navbar-bg" asp-area="" asp-controller="CoffeeShop" asp-action="Contact">تماس با ما</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link navbar-bg" asp-area="" asp-controller="CoffeeShop" asp-action="Privacy">حریم خصوصی</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+        <!-- Navbar -->
+        <nav class="navbar">
+            <ul>
+                <li><a class="navbar-links" title="Home" asp-controller="CoffeeShop" asp-action="Index">خانه</a></li>
+                <li><a class="navbar-links" title="Products" asp-controller="CoffeeShop" asp-action="Products">محصولات</a></li>
+                <li><a class="navbar-links" title="Contact" asp-controller="CoffeeShop" asp-action="Contact">تماس با ما</a></li>
+                <li><a class="navbar-links" title="Privacy" asp-controller="CoffeeShop" asp-action="Privacy">سیاست حفظ حریم خصوصی</a></li>
+            </ul>
+            <div class="logo">کافه قهوه</div>
         </nav>
     </header>
+    <!-- Hero Section -->
+    <section class="hero">
+        @await RenderSectionAsync("HeroSection", required: false)
+    </section>
     <div>
         @RenderBody()
     </div>
+    <!-- Footer -->
+    <footer>
+        این یک سایت نمونه برای رزومه میباشد.
+        <a class="navbar-links" style="text-decoration:underline;margin-right:20px;" title="Privacy" asp-controller="CoffeeShop" asp-action="Privacy">سیاست حفظ حریم خصوصی</a>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     @await RenderSectionAsync("scripts", required: false)
 </body>

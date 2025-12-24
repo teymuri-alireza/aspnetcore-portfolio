@@ -1,10 +1,83 @@
-﻿.navbar-bg {
-/*        background-color: #EAD8CC;
-    color: #3B1C15;*/
-    background-color: #BDA19B;
-    color: #2B140D;
+﻿body {
+    margin: 0;
+    font-family: "Tahoma", "Vazirmatn", sans-serif;
+    background-color: #f5efe6;
+    color: #3e2723;
 }
+
+/* Navbar */
 .navbar {
+    background-color: #4e342e;
+    padding: 16px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #f5efe6;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 24px;
     margin: 0;
     padding: 0;
+}
+
+.navbar-links {
+    text-decoration: none;
+    color: #f5efe6;
+    font-size: 16px;
+}
+
+.navbar-links:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 40px;
+    background: linear-gradient(135deg, #6d4c41, #3e2723);
+    color: #fff;
+}
+
+.hero-text {
+    max-width: 50%;
+}
+
+.hero-text h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.hero-image {
+/*    width: 40%;*/
+    height: 280px;
+    background-color: #d7ccc8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #5d4037;
+    font-size: 18px;
+}
+
+/* Footer */
+footer {
+    background-color: #4e342e;
+    color: #f5efe6;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
 }
