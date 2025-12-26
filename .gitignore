@@ -12,5 +12,6 @@ obj/
 *.log
 *.cache
 
-# App settings (development only)
+# App settings
 appsettings.Development.json
+appsettings.json
