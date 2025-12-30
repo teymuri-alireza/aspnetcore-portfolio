@@ -33,11 +33,12 @@ namespace MyPortfolio.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,Price,Type")] Coffee coffee, IFormFile imageFile)
+        public async Task<IActionResult> Create([Bind("Id","Name","Price","Type")] Coffee coffee, IFormFile imageFile)
         {
-            if (!ModelState.IsValid)
-                return View(coffee);
+            // Ensure server-populated required properties have values before validating model state
+            coffee.Available = true; // default availability when creating
 
+            // Handle image upload first so ImagePath is set
             if (imageFile != null && imageFile.Length > 0)
             {
                 var uploadsFolder = Path.Combine(
@@ -57,6 +58,18 @@ namespace MyPortfolio.Controllers
 
                 coffee.ImagePath = "/images/CoffeeShop/uploads/" + fileName;
             }
+            else
+            {
+                // Provide a default image path (make sure this file exists in your project) or an empty string
+                coffee.ImagePath = "/images/CoffeeShop/default.png";
+            }
+
+            // Remove model state entries for properties we populated server-side so validation succeeds
+            ModelState.Remove(nameof(coffee.ImagePath));
+            ModelState.Remove(nameof(coffee.Available));
+
+            if (!ModelState.IsValid)
+                return View(coffee);
 
             _context.CoffeeProducts.Add(coffee);
             await _context.SaveChangesAsync();
@@ -67,7 +80,7 @@ namespace MyPortfolio.Controllers
 
         public IActionResult Contact()
         {
-            return View(); 
+            return View();
         }
     }
 }
