@@ -15,7 +15,8 @@ namespace MyPortfolio.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            return RedirectToAction("Index", "CoffeeShop");
+            //return View();
         }
 
         public IActionResult Privacy()

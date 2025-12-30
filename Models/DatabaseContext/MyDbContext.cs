@@ -7,7 +7,7 @@ namespace MyPortfolio.Models.DatabaseContext
     {
         public MyDbContext(DbContextOptions<MyDbContext> options) : base(options) { }
         
-        public DbSet<Coffee> Products { get; set; }
+        public DbSet<Coffee> CoffeeProducts { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

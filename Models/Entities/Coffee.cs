@@ -7,6 +7,7 @@
         public required int Price { get; set; }
         public required bool Available { get; set; }
         public required Category Type { get; set; }
+        public required string ImagePath { get; set; }
     }
     public enum Category
     {
