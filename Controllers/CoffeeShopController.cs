@@ -77,6 +77,17 @@ namespace MyPortfolio.Controllers
             return RedirectToAction("Products");
         }
 
+        [HttpGet]
+        public async Task<IActionResult> Details(int id)
+        {
+            var findItem = await _context.CoffeeProducts.FirstOrDefaultAsync(item => item.Id == id);
+            if (findItem == null)
+            {
+                return RedirectToAction("Products");
+            }
+
+            return View(findItem);
+        }
 
         public IActionResult Contact()
         {
