@@ -6,19 +6,13 @@
 }
 
 @section HeroSection {
-    <div class="hero-text">
-        <h1>ایجاد کالای جدید</h1>
-        <p>
-            به علت نمونه بودن این سایت برای پروژه، ساخت کالای جدید بلامانع است.
-        </p>
-        <a class="btn btn-primary" asp-action="Create" asp-controller="CoffeeShop">ساخت کالای جدید</a>
-    </div>
+    <h2 class="text-center" style="margin-top:10px;">محصولات</h2>
+
 }
 
 <!-- main content -->
 <div class="container">
-    <h2>Products</h2>
-
+    <span style="margin:25px;"></span>
     @if (Model == null || !Model.Any())
     {
         <p>هیچ کالایی یافت نشد.</p>
@@ -38,3 +32,11 @@
     }
 </div>
 
+<hr />
+<div class="hero-text">
+    <h4>ایجاد کالای جدید</h4>
+    <p>
+        به علت نمونه بودن این سایت برای رزومه، ساخت کالای جدید بلامانع است.
+    </p>
+    <a class="btn btn-primary" asp-action="Create" asp-controller="CoffeeShop">ساخت کالای جدید</a>
+</div>
