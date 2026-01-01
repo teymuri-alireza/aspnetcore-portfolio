@@ -34,8 +34,8 @@
         <div class="col-sm-10">
             <select asp-for="Type" class="form-select w-50">
                 <option disabled selected>نوع قهوه را انتخاب کنید</option>
-                <option>گرم</option>
-                <option>سرد</option>
+                <option value="0">گرم</option>
+                <option value="1">سرد</option>
             </select>
             <span asp-validation-for="Type" class="text-danger"></span>
         </div>

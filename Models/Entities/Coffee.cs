@@ -29,7 +29,9 @@ namespace MyPortfolio.Models.Entities
     }
     public enum Category
     {
+        [Display(Name = "گرم")]
         Hot,
+        [Display(Name = "سرد")]
         Iced
     }
 }
