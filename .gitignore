@@ -15,3 +15,5 @@ obj/
 # App settings
 appsettings.Development.json
 appsettings.json
+
+wwwroot/images/CoffeeShop/uploads/*
