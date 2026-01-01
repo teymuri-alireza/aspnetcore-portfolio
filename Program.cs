@@ -5,9 +5,18 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Services.AddDbContext<MyDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("CoffeeConnection"))
-);
+
+// SQL Server connection
+
+// builder.Services.AddDbContext<MyDbContext>(options =>
+//     options.UseSqlServer(builder.Configuration.GetConnectionString("CoffeeConnection"))
+// );
+
+// PostgreSQL connection
+
+builder.Services.AddDbContext<MyDbContext>(options => 
+    options.UseNpgsql(builder.Configuration.GetConnectionString("CoffeeConnection"))
+    );
 
 var app = builder.Build();
 
