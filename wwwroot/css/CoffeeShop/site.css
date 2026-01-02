@@ -1,6 +1,13 @@
-﻿body {
+﻿@font-face {
+  font-family: Parastoo;
+    src:    url('../../Font/Parastoo.woff') format('woff'),
+            url('../../Font/Parastoo.ttf') format('truetype');
+  font-weight: normal;
+}
+
+body {
     margin: 0;
-    font-family: "Tahoma", "Vazirmatn", sans-serif;
+    font-family: Parastoo;
     background-color: #f5efe6;
     color: #3e2723;
 }
