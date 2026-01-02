@@ -16,7 +16,6 @@
                 <li><a class="navbar-links" title="Home" asp-controller="CoffeeShop" asp-action="Index">خانه</a></li>
                 <li><a class="navbar-links" title="Products" asp-controller="CoffeeShop" asp-action="Products">محصولات</a></li>
                 <li><a class="navbar-links" title="Contact" asp-controller="CoffeeShop" asp-action="Contact">تماس با ما</a></li>
-                <li><a class="navbar-links" title="Privacy" asp-controller="CoffeeShop" asp-action="Privacy">سیاست حفظ حریم خصوصی</a></li>
             </ul>
             <div class="logo">کافه قهوه</div>
         </nav>
@@ -31,7 +30,7 @@
     <!-- Footer -->
     <footer>
         این یک سایت نمونه برای رزومه میباشد.
-        <a class="navbar-links" style="text-decoration:underline;margin-right:20px;" title="Privacy" asp-controller="CoffeeShop" asp-action="Privacy">سیاست حفظ حریم خصوصی</a>
+        <a class="navbar-links" style="text-decoration:underline;margin-right:20px;" title="Privacy" href="#">سیاست حفظ حریم خصوصی</a>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     @await RenderSectionAsync("scripts", required: false)
