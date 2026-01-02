@@ -1,8 +1,10 @@
 ﻿@using MyPortfolio.Models.Entities
 @model MyPortfolio.Models.Entities.Coffee;
 
-<div class="card" style="width: 18rem;">
-    <img src="@Model.ImagePath" class="card-img-top" style="width: 100%; height: auto; aspect-ratio: 1 / 1;">
+<div class="card" style="min-width: 18rem;">
+    <div class="product-image">
+        <img src="@Model.ImagePath" class="card-img-top" style="object-fit: contain">
+    </div>
     <div class="card-body">
         <h5 class="card-title">@Model.Name</h5>
         <p class="card-text">@Model.Price تومان</p>
@@ -14,6 +16,7 @@
         {
             <span class="card-text">نوع قهوه: سرد</span>
         }
+        <br />
         <br />
         <a asp-action="Details" asp-controller="CoffeeShop" asp-route-id="@Model.Id" class="btn btn-primary">مدیریت محصول</a>
     </div>
