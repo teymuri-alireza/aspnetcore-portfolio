@@ -27,7 +27,7 @@ namespace MyPortfolio.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Create()
+        public IActionResult Create()
         {
             return View();
         }
@@ -61,7 +61,7 @@ namespace MyPortfolio.Controllers
             else
             {
                 // Provide a default image path (make sure this file exists in your project) or an empty string
-                coffee.ImagePath = "/images/CoffeeShop/default.png";
+                coffee.ImagePath = "/images/CoffeeShop/uploads/default.webp";
             }
 
             // Remove model state entries for properties we populated server-side so validation succeeds
@@ -87,6 +87,34 @@ namespace MyPortfolio.Controllers
             }
 
             return View(findItem);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var findItem = await _context.CoffeeProducts.FirstOrDefaultAsync(item => item.Id == id);
+            if (findItem == null)
+            {
+                TempData["itemNotFound"] = $"محصول با id = {id} یافت نشد.";
+                return RedirectToAction("Products");
+            }
+
+            // Delete the image file if it exists
+            if (!string.IsNullOrEmpty(findItem.ImagePath) && findItem.ImagePath != "/images/CoffeeShop/default.webp")
+            {
+                var imagePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", findItem.ImagePath.TrimStart('/'));
+                if (System.IO.File.Exists(imagePath))
+                {
+                    System.IO.File.Delete(imagePath);
+                }
+            }
+            // delete item from database
+            _context.CoffeeProducts.Remove(findItem);
+            await _context.SaveChangesAsync();
+
+            TempData["itemDeletesuccess"] = $"محصول با id = {id} با موفقیت پاک شد.";
+            return RedirectToAction("Products");
         }
 
         public IActionResult Contact()
