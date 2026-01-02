@@ -8,3 +8,44 @@
 @section heroSection {
     <h2>صفحه مدیریت محصول</h2>
 }
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">@Model.Name</h5>
+                    <img src="@Model.ImagePath" alt="@Model.Name" class="img-fluid mb-3" style="max-height: 400px;">
+                    
+                    <table class="table table-borderless">
+                        <tr>
+                            <td><strong>قیمت:</strong></td>
+                            <td>@Model.Price تومان</td>
+                        </tr>
+                        <tr>
+                            <td><strong>نوع:</strong></td>
+                            <td>@Model.Type</td>
+                        </tr>
+                        <tr>
+                            <td><strong>موجود:</strong></td>
+                            <td>@(Model.Available ? "بله" : "خیر")</td>
+                        </tr>
+                    </table>
+
+                    <div class="mt-4">
+                        <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">ویرایش</a>
+
+                        <form asp-action="Delete" asp-route-id="@Model.Id" method="post" style="display:inline;">
+                            @Html.AntiForgeryToken()
+                            <button type="submit" class="btn btn-danger">
+                                حذف
+                            </button>
+                        </form>
+
+                        <a asp-action="Products" class="btn btn-secondary">بازگشت</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
