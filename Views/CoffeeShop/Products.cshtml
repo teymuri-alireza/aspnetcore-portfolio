@@ -13,13 +13,13 @@
 <!-- delete alert -->
 @if (TempData["itemDeletesuccess"]?.ToString() != null)
 {
-    <div class="alert alert-success" role="alert">
+    <div class="alert alert-success" role="alert" id="delete-alert">
     @TempData["itemDeletesuccess"]
     </div>
 }
 @if (TempData["itemNotFound"]?.ToString() != null)
 {
-    <div class="alert alert-danger" role="alert">
+    <div class="alert alert-danger" role="alert" id="delete-alert">
     @TempData["itemNotFound"]
     </div>
 }
@@ -56,3 +56,7 @@
     </p>
     <a class="btn btn-primary" asp-action="Create" asp-controller="CoffeeShop">ساخت کالای جدید</a>
 </div>
+
+@section scripts{
+    <script src="~/js/CoffeeShop/products.js"></script>
+}
