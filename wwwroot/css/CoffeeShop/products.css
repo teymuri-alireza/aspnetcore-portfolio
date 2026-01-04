@@ -1,0 +1,24 @@
+.item-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.item-image {
+    height: 220px;
+/*    width: 140px;*/
+    background-color: #efebe9;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6d4c41;
+}
+
+.images {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
