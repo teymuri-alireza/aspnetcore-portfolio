@@ -24,8 +24,7 @@ namespace MyPortfolio.Models.Entities
         public required Category Type { get; set; }
 
         [DisplayName("عکس")]
-        [Required(ErrorMessage = "پر کردن فیلد {0} اجباری است.")]
-        public required string ImagePath { get; set; }
+        public string? ImagePath { get; set; }
     }
     public enum Category
     {

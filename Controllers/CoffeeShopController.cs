@@ -33,7 +33,7 @@ namespace MyPortfolio.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id","Name","Price","Type")] Coffee coffee, IFormFile imageFile)
+        public async Task<IActionResult> Create([Bind("Id","Name","Price","Type")] Coffee coffee, IFormFile? imageFile)
         {
             // Ensure server-populated required properties have values before validating model state
             coffee.Available = true; // default availability when creating
@@ -65,7 +65,7 @@ namespace MyPortfolio.Controllers
             }
 
             // Remove model state entries for properties we populated server-side so validation succeeds
-            ModelState.Remove(nameof(coffee.ImagePath));
+            // ModelState.Remove(nameof(coffee.ImagePath));
             ModelState.Remove(nameof(coffee.Available));
 
             if (!ModelState.IsValid)
