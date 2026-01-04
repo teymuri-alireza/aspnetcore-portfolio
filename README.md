@@ -5,8 +5,9 @@ Note: the website for preview will be added.
 
 # To-do list
 
-- [ ] Fix default image path for creating without image filename
+- [ ] Publish website and add the link to it
 - [ ] Change the home page coffee images container
 - [ ] Fix the Persian input for price
 - [ ] Add Edit action for details page
+- [x] ~~Fix default image path for creating without image filename~~
 - [x] ~~Set timeout for deleting alerts in products action page~~
