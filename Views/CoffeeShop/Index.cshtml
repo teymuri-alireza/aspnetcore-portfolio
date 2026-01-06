@@ -1,51 +1,144 @@
 ﻿
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "کافه قهوه | طعم خاص قهوه‌های دست‌ساز";
     Layout = "_LayoutCoffeeShop";
 }
 
-@section css{
-    <link rel="stylesheet" asp-append-version="true" href="~/css/CoffeeShop/home.css" />
-}
+<span class="badge">
+⚠️ این سایت صرفا برای رزومه میباشد. بعلت امنیت سایت دسترسی ایجاد و پاک کردن محصولات غیرفعال شده‌اند.
+</span>
 
-@section HeroSection{
-    <div class="hero-text">
-        <h1>طعم واقعی قهوه</h1>
-        <p>
-            در کافه قهوه، بهترین دانه‌های قهوه با عشق و دقت آماده می‌شوند.
-            تجربه‌ای گرم، آرام و فراموش‌نشدنی در انتظار شماست.
-        </p>
+<section class="section hero" id="hero">
+    <div>
+    <h1>کافه قهوه؛ دعوت به دنیای طعم و عطر اصیل</h1>
+    <p class="lead">از اسپرسوی پرانرژی تا لاته‌های ابریشمی، هر فنجان با دقت و عشق آماده می‌شود تا لحظه‌ای گرم و خاطره‌ساز برایتان بسازد.</p>
+    <div class="actions">
+        <a class="btn" href="#menu">مشاهده منو</a>
+        <a class="btn secondary" href="#about">چرا ما؟</a>
     </div>
-    <div class="hero-image">
-        <img class="home-imgs" src="~/images/CofeeShop/coffee-logo.png" />
+    <div style="margin-top:18px; display:flex; gap:10px; flex-wrap:wrap;">
+        <span class="pill">Wi-Fi رایگان</span>
+        <span class="pill">برشته‌کاری روزانه</span>
+        <span class="pill">موسیقی زنده آخر هفته</span>
     </div>
+    </div>
+</section>
+<section class="section" id="about">
+    <div style="display:grid; grid-template-columns:1.1fr 0.9fr; gap:18px; align-items:center;">
+    <div>
+        <h2>کمی درباره ما</h2>
+        <p class="subhead">کافه قهوه از دانه‌های تازه برشته‌شده، باریستاهای آموزش‌دیده و فضای صمیمی استفاده می‌کند تا تجربه‌ای واقعی از قهوه‌نوشی ارائه دهد.</p>
+        <div class="features">
+        <span class="tag">قهوه موج سوم</span>
+        <span class="tag">دسرهای خانگی</span>
+        <span class="tag">نوشیدنی‌های بدون کافئین</span>
+        </div>
+    </div>
+    <div class="card">
+        <div class="testimonial">
+        <div class="avatar">S</div>
+        <div>
+            <strong>کاربر نمونه</strong>
+            <div style="color:var(--muted);">مشتری وفادار</div>
+        </div>
+        </div>
+        <p style="margin-top:12px; color:var(--text);">«ممنون از حس خوبی که برام میسازید. بهترین کافه محله!»</p>
+        <div class="features">
+        <span class="pill">امتیاز ۴.۹</span>
+        <span class="pill">+۲۵۰ نظر</span>
+        </div>
+    </div>
+    </div>
+</section>
 
-}
+<section class="section" id="menu">
+    <h2>منوی محبوب</h2>
+    <p class="subhead">انتخاب باریستا برای شروعی خوش‌طعم</p>
+    <div class="grid">
+        <a asp-action="Product" class="card product-card" asp-controller="CoffeeShop" asp-route-id="1">
+            <div>
+                <div class="tag">اسپرسو دبل</div>
+                <p style="color:var(--muted); margin:8px 0;">قوی، متعادل و با کرمای مخملی</p>
+                <div class="price">۱۲۰ تومان</div>
+            </div>
+        </a>
+        <a asp-action="Product" class="card product-card" asp-controller="CoffeeShop" asp-route-id="2">
+            <div>
+                <div class="tag">لاته وانیل</div>
+                <p style="color:var(--muted); margin:8px 0;">شیر بخار دیده با لایه فوم نرم وانیلی</p>
+                <div class="price">۱۴۴ تومان</div>
+            </div>
+        </a>
+        <a asp-action="Product" class="card product-card" asp-controller="CoffeeShop" asp-route-id="3">
+            <div>
+                <div class="tag">کاپوچینو کلاسیک</div>
+                <p style="color:var(--muted); margin:8px 0;">تعادل شیر و اسپرسو با دارچین</p>
+                <div class="price">۱۶۸ تومان</div>
+            </div>
+        </a>
+        <a asp-action="Product" class="card product-card" asp-controller="CoffeeShop" asp-route-id="4">
+            <div>
+                <div class="tag">موکا</div>
+                <p style="color:var(--muted); margin:8px 0;">شکلات تلخ، اسپرسو و فوم کرمی</p>
+                <div class="price">۹۲ تومان</div>
+            </div>
+        </a>
+    </div>
+</section>
 
-<!-- Products Section -->
-<section class="products" id="products">
-    <h2>محصولات ما</h2>
-    <div class="product-list">
-        <div class="product-card">
-            <div class="product-image">
-                <img class="home-imgs" src="~/images/CofeeShop/espresso-img2.jpg" />
-            </div>
-            <h3>اسپرسو</h3>
-            <p>قهوه‌ای غلیظ و انرژی‌بخش با طعمی عمیق.</p>
+<section class="section" id="specials">
+    <h2>تخصص‌های باریستا</h2>
+    <p class="subhead">طعم‌های خاص برای عاشقان قهوه</p>
+    <div class="grid">
+    <div class="card">
+        <div class="tag">پُرُور اُریجین</div>
+        <p style="color:var(--muted); margin:8px 0;">دانه تک‌خاستگاه اتیوپی، طعم گلی و مرکبات</p>
+        <div class="pill">V60 | آیر پرس</div>
+    </div>
+    <div class="card">
+        <div class="tag">نیترو کلدبرو</div>
+        <p style="color:var(--muted); margin:8px 0;">سرد و مخملی با حباب‌های ریز نیتروژن</p>
+        <div class="pill">سرو در لیوان یخ‌پولیش</div>
+    </div>
+    <div class="card">
+        <div class="tag">اسپرسو تونیک</div>
+        <p style="color:var(--muted); margin:8px 0;">اسپرسو شات روی تونیک و یخ شفاف</p>
+        <div class="pill">لیموی تازه</div>
+    </div>
+    </div>
+</section>
+
+<section class="section" id="reserve">
+    <div style="display:grid; grid-template-columns:0.95fr 1.05fr; gap:18px; align-items:start;">
+    <div>
+        <h2>رزرو میز یا سفارش بیرون‌بر</h2>
+        <p class="subhead">اطلاعات را وارد کنید؛ تیم ما خیلی زود تأیید می‌کند.</p>
+        <div class="card" style="margin-top:12px;">
+        <h3 style="margin:0 0 8px;">ساعت کاری</h3>
+        <p style="color:var(--muted); margin:0;">هر روز ۸ تا ۲۳ | جمعه ۹ تا ۲۴</p>
+        <div class="features" style="margin-top:10px;">
+            <span class="pill">تلفن: 021-1234</span>
+            <span class="pill">آدرس: خیابان انقلاب، کوچه دهم</span>
         </div>
-        <div class="product-card">
-            <div class="product-image">
-                <img class="home-imgs" src="~/images/CofeeShop/cappuccino-img2.jpg" />
-            </div>
-            <h3>کاپوچینو</h3>
-            <p>ترکیبی متعادل از قهوه، شیر و فوم.</p>
         </div>
-        <div class="product-card">
-            <div class="product-image">
-                <img class="home-imgs" src="~/images/CofeeShop/latte-image.jpg" />
-            </div>
-            <h3>لاته</h3>
-            <p>نرم، خامه‌ای و مناسب دوستداران طعم ملایم.</p>
-        </div>
+    </div>
+    <div class="card">
+        <form id="reserveForm">
+        <input type="text" name="name" placeholder="نام شما" required />
+        <input type="tel" name="phone" placeholder="شماره تماس" required />
+        <select name="people">
+            <option value="">تعداد نفرات</option>
+            <option>۱ نفر</option>
+            <option>۲ نفر</option>
+            <option>۳-۴ نفر</option>
+            <option>۵ نفر به بالا</option>
+        </select>
+        <input type="date" name="date" />
+        <input type="time" name="time" />
+        <textarea name="note" placeholder="یادداشت یا سفارش خاص"></textarea>
+        <button class="btn" type="submit">ثبت درخواست</button>
+        </form>
+        <div id="formMessage" style="margin-top:10px; color:var(--accent-strong); display:none;">درخواست شما ثبت شد! به‌زودی تماس می‌گیریم.</div>
+    </div>
     </div>
 </section>
