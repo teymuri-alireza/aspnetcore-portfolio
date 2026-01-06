@@ -1,0 +1,117 @@
+.product-body {
+    background: radial-gradient(circle at 20% 20%, rgba(212,165,116,0.08), transparent 35%), #0c0a08;
+    color: #f1e7d7;
+    min-height: 50vh;
+    display: grid;
+    place-items: center;
+    padding: 32px 16px;
+} 
+.product-shell {
+    width: min(960px, 100%);
+    background: linear-gradient(150deg, #16110f, #0d0907);
+    border-radius: 26px;
+    border: 1px solid rgba(212,165,116,0.25);
+    box-shadow: var(--shadow);
+    padding: 22px;
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 22px;
+}
+.product-media {
+    border-radius: 20px;
+    background: radial-gradient(circle at 40% 20%, rgba(240,197,138,0.24), transparent 60%), #120d0b;
+    border: 1px dashed rgba(240,197,138,0.35);
+    display: grid;
+    place-items: center;
+    padding: 18px;
+    position: relative;
+    overflow: hidden;
+}
+.image-placeholder {
+    width: 100%;
+    max-width: 320px;
+    aspect-ratio: 4 / 5;
+    border-radius: 22px;
+    border: 1px solid rgba(240,197,138,0.55);
+    background: repeating-linear-gradient(
+        135deg,
+        rgba(240,197,138,0.16),
+        rgba(240,197,138,0.16) 12px,
+        transparent 12px,
+        transparent 24px
+    );
+    display: grid;
+    place-items: center;
+    color: var(--accent-strong);
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+.image-placeholder img {
+    border-radius: 22px;
+}
+.product-body {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+.field {
+    display: grid;
+    grid-template-columns: 120px minmax(0, 1fr);
+    gap: 10px;
+    align-items: center;
+}
+.field-label {
+    font-size: 0.92rem;
+    color: var(--muted);
+}
+.field-value {
+    padding: 10px 12px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    background: #0f0b09;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+}
+.field-value.placeholder {
+    color: #7f6e58;
+    font-size: 0.95rem;
+}
+.price-tag {
+    font-weight: 700;
+    color: var(--accent-strong);
+    font-size: 1.05rem;
+}
+.pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: rgba(212,165,116,0.12);
+    color: var(--accent-strong);
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+.meta {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 6px;
+}
+.title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin: 0;
+}
+.hint {
+    font-size: 0.86rem;
+    color: var(--muted);
+}
+@media (max-width: 780px) {
+    .product-shell {
+    grid-template-columns: 1fr;
+    }
+}

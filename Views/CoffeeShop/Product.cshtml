@@ -1,0 +1,63 @@
+@model MyPortfolio.Models.Entities.Coffee
+
+@{
+    ViewData["Title"] = "صفحه محصول";
+    Layout = "_LayoutCoffeeShop";
+}
+
+@section style {
+    <link rel="stylesheet" asp-append-version="true" href="~/css/CoffeeShop/product.css" />
+}
+
+<div class="product-body">
+    <article class="product-shell">
+        <div class="product-media">
+        <div class="image-placeholder">
+            <img alt="Coffee Image" src="@Model.ImagePath" />
+        </div>
+        </div>
+
+        <div class="product-body">
+        <header>
+            <h1 class="title">@Model.Name</h1>
+            @* <p class="hint">توضیحات کوتاه محصول (اختیاری)</p> *@
+        </header>
+
+        <div class="field">
+            <div class="field-label">قیمت</div>
+            <div class="field-value">
+            <span class="price-tag">@Model.Price</span>
+            <span class="hint">تومان</span>
+            </div>
+        </div>
+
+        <div class="field">
+            <div class="field-label">وضعیت</div>
+            <div class="field-value placeholder">
+            @{
+                if (Model.Available == true)
+                {
+                    <span>موجود</span>
+                }
+                else
+                {
+                    <span>ناموجود</span>
+                }
+            }
+            </div>
+        </div>
+
+        <div class="field">
+            <div class="field-label">نوع نوشیدنی</div>
+            <div class="field-value">
+            <span class="pill">@Model.Type</span>
+            </div>
+        </div>
+
+        <section class="meta">
+            <span class="pill">اندازه: متوسط</span>
+            <span class="pill">قهوه موج سوم</span>
+        </section>
+        </div>
+    </article>
+</div>
