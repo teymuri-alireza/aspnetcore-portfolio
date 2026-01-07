@@ -124,19 +124,17 @@
     </div>
     <div class="card">
         <form id="reserveForm">
-        <input type="text" name="name" placeholder="نام شما" required />
-        <input type="tel" name="phone" placeholder="شماره تماس" required />
-        <select name="people">
-            <option value="">تعداد نفرات</option>
-            <option>۱ نفر</option>
-            <option>۲ نفر</option>
-            <option>۳-۴ نفر</option>
-            <option>۵ نفر به بالا</option>
-        </select>
-        <input type="date" name="date" />
-        <input type="time" name="time" />
-        <textarea name="note" placeholder="یادداشت یا سفارش خاص"></textarea>
-        <button class="btn" type="submit">ثبت درخواست</button>
+            <input type="text" name="name" placeholder="نام شما" required />
+            <input type="tel" name="phone" placeholder="شماره تماس" maxlength="11" required />
+            <select name="people">
+                <option value="">تعداد نفرات</option>
+                <option>۱ نفر</option>
+                <option>۲ نفر</option>
+                <option>۳-۴ نفر</option>
+                <option>۵ نفر به بالا</option>
+            </select>
+            <textarea name="note" placeholder="یادداشت یا سفارش خاص"></textarea>
+            <button class="btn" type="submit">ثبت درخواست</button>
         </form>
         <div id="formMessage" style="margin-top:10px; color:var(--accent-strong); display:none;">درخواست شما ثبت شد! به‌زودی تماس می‌گیریم.</div>
     </div>
