@@ -145,7 +145,23 @@ p.lead {
     margin-bottom: 26px;
 }
 .actions { display: flex; gap: 12px; flex-wrap: wrap; }
-
+.hero-card {
+    background: linear-gradient(160deg, #1f1612, #120d0b);
+    border: 1px solid rgba(212,165,116,0.15);
+    border-radius: var(--radius);
+    padding: 22px;
+    position: relative;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+.hero-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 30% 20%, rgba(212,165,116,0.2), transparent 45%);
+    opacity: 0.7;
+    pointer-events: none;
+}
 h2 {
     margin: 0 0 12px;
     font-size: 1.7rem;
