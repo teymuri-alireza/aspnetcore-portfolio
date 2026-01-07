@@ -17,3 +17,6 @@ appsettings.Development.json
 appsettings.json
 
 wwwroot/images/CoffeeShop/uploads/*
+
+# publish directory
+publish/
