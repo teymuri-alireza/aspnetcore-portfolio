@@ -1,3 +1,4 @@
+@using MyPortfolio.Models.Entities
 @model MyPortfolio.Models.Entities.Coffee
 
 @{
@@ -41,7 +42,7 @@
                 }
                 else
                 {
-                    <span>ناموجود</span>
+                    <span style="color: red;">ناموجود</span>
                 }
             }
             </div>
@@ -50,7 +51,16 @@
         <div class="field">
             <div class="field-label">نوع نوشیدنی</div>
             <div class="field-value">
-            <span class="pill">@Model.Type</span>
+            @{
+                if (Model.Type == Category.Hot)
+                {
+                    <span class="pill">گرم</span>
+                }
+                else
+                {
+                    <span class="pill">سرد</span>
+                }
+            }
             </div>
         </div>
 
